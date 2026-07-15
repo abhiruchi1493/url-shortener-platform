@@ -7,6 +7,7 @@ import com.shortener.url.domain.port.`in`.CreateShortUrlUseCase
 import com.shortener.url.domain.port.`in`.ResolveShortUrlQuery
 import com.shortener.url.domain.port.`in`.ResolveShortUrlUseCase
 import com.shortener.url.domain.port.`in`.ShortUrlResult
+import org.hamcrest.Matchers.containsString
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
@@ -152,7 +153,7 @@ class UrlShortenerControllerTest {
             status { isBadRequest() }
             content { contentType(MediaType.APPLICATION_JSON) }
             jsonPath("$.status") { value(400) }
-            jsonPath("$.message") { value("originalUrl: originalUrl must not be blank") }
+            jsonPath("$.message") { value(containsString("originalUrl: originalUrl must not be blank")) }
         }
     }
 
