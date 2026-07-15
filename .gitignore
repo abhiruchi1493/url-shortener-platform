@@ -1,0 +1,33 @@
+# macOS
+.DS_Store
+
+# IntelliJ IDEA / JetBrains
+.idea/
+
+
+# Gradle
+.gradle/
+build/
+**/build/
+
+# Kotlin / Java
+*.class
+out/
+
+# Logs
+*.log
+
+# Environment and local config
+.env
+.env.*
+!.env.example
+
+# Docker/local runtime data
+*.pid
+*.seed
+*.tmp
+
+# Test and coverage output
+coverage/
+test-results/
+
